@@ -1,10 +1,7 @@
 var digitSum = function(number,cb)
 {
-	if(isNaN(number)){
+	if(isNaN(number) || number%1!=0){
 		cb("Invalid Input",null)
-	}
-	if(number%1!=0) {
-		cb('Invalid Input',null);
 	}
 	else
 	{

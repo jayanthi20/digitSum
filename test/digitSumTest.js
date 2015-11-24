@@ -27,4 +27,12 @@ it("should return as invalid input if the input is non numeric",function(done){
 	})
 })
 
+it("should return as invalid input if the input is floating point",function(done){
+	number="1234.53433"
+	digitSum(number,function(err,sum){
+	expect(err =="Invalid Input").to.equal(true)
+	done()
+	})
+})
+
 })

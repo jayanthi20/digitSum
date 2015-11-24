@@ -2,7 +2,7 @@ var dbConnect=require('./dbConnect.js')
 var digitSum=require('./digitSum.js')
 var saveRecord=require('./saveRecord.js')
 
-var number="12 567"
+var number="j#a"
 dbConnect(function(err,db){
 	if(err)
 	{
