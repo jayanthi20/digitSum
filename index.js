@@ -2,7 +2,7 @@ var dbConnect=require('./dbConnect.js')
 var digitSum=require('./digitSum.js')
 var saveRecord=require('./saveRecord.js')
 
-var number="j#a"
+var number="1235"
 dbConnect(function(err,db){
 	if(err)
 	{
@@ -15,7 +15,7 @@ dbConnect(function(err,db){
 				console.log(err)
 			}
 			else{
-			saveRecord({number:number,digitSum:sum,time:new Date().getTime()},function(err,str){
+			saveRecord(db,{number:number,digitSum:sum,time:new Date().getTime()},function(err,str){
 				if(err)
 				{
 					console.log(err)

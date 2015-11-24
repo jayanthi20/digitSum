@@ -1,8 +1,7 @@
 var dbConnect=require('./dbConnect.js')
 var MongoClient=require('mongodb').MongoClient
 
-var saveRecord=function(record,cb){
-dbConnect(function(err,db){
+var saveRecord=function(db,record,cb){
 	db.collection('digitSum').insert(record,function(err,doc){
 		if(err){
 			cb(err,null)
@@ -11,7 +10,6 @@ dbConnect(function(err,db){
 			cb(null,"Record saved successfully")
 		}
 	})
-})
 }
 
 module.exports=saveRecord

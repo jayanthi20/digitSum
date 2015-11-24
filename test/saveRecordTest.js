@@ -14,10 +14,12 @@ it("should have function to save record to database", function (done) {
 
 it("should save record to database", function (done) {
  	record={id:"test"}
- 	saveRecord(record,function(err,doc){
+ 	dbConnect(function(err,db){
+ 	saveRecord(db,record,function(err,doc){
  		expect(doc).to.equal("Record saved successfully")
  		done()
- 	}) 	
+ 	})
+ })
 })
 
 after(function(done){
