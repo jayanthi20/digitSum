@@ -3,6 +3,9 @@ var digitSum = function(number,cb)
 	if(isNaN(number)){
 		cb("Invalid Input",null)
 	}
+	if(number%1!=0) {
+		cb('Invalid Input',null);
+	}
 	else
 	{
 		var str=number.toString();
