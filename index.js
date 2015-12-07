@@ -1,6 +1,7 @@
 var dbConnect = require('./util/dbConnect.js')
 var digitSum = require('./util/digitSum.js')
 var saveRecord = require('./util/saveRecord.js')
+var app = require('express')()
 
 var number = '1235'
 dbConnect(function(err,db){
@@ -23,4 +24,8 @@ dbConnect(function(err,db){
 			}
 		})
 	}
+})
+
+app.listen(8888,function(){
+	console.log('listening on port 8888')
 })
